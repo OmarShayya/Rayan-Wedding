@@ -1,0 +1,238 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Coronet&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Coronet', cursive;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.logo {
+    width: 200px;
+    position: absolute;
+    top: -200px;
+    left: -140px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 18px;
+    z-index: 99999999999;
+    border-radius: 25px;
+}
+
+.content {
+    padding: 2rem;
+    z-index: 99;
+    text-align: center;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.blob-btn {
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 300px;
+    display: inline-block;
+}
+
+.blob-btn:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+.blob-btn:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+}
+
+.blob-btn:hover {
+    color: #0505A9;
+}
+
+.blob-btn:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+}
+
+.blob-btn__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #0505A9;
+}
+
+.blob-btn__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+}
+
+.blob-btn__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: white;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.4);
+    transition: transform 0.45s;
+}
+
+.blob-btn__blob:nth-child(1) {
+    left: 0;
+    transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+    left: 25%;
+    transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+    left: 50%;
+    transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+    left: 75%;
+    transition-delay: 0.24s;
+}
+
+.blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankyou {
+    margin-top: 50px;
+    width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header {
+        height: 40vh;
+    }
+
+    .logo {
+        width: 120px;
+        top: -180px;
+        left: -66px;
+    }
+
+    .title {
+        font-size: 2rem;
+        padding: 12px;
+        margin-top: -14%;
+        width: 240px;
+        background-color: rgb(234, 240, 252);
+    }
+
+    .description {
+        font-size: 1.9rem;
+        margin-top: 30px;
+    }
+
+    .blob-btn {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .thankyou {
+        margin-top: 50px;
+        width: 200px;
+    }
+}
