@@ -1,16 +1,6 @@
 /* styles.css */
 
-@font-face {
-    font-family: 'Coronet';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Coronet'), url('assets/fonts/Coronet.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'MagniluaScript';
-    src: url('assets/fonts/MagniluaScript.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Coronet&family=Dancing+Script:wght@400;700&display=swap');
 
 body {
     margin: 0;
@@ -81,7 +71,7 @@ body {
 }
 
 .description {
-    font-family: 'MagniluaScript', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 2rem;
     line-height: 1.5;
     margin-top: 50px;
@@ -245,13 +235,5 @@ footer {
     .thankyou {
         margin-top: 50px;
         width: 200px;
-    }
-}
-
-@media (max-width: 380px) {
-    .logo {
-
-        top: -140px;
-
     }
 }
